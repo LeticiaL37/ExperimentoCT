@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotador de Enlaces</title>
+    <script>
+        // Array de URLs que deseas rotar
+        const urls = [
+            "https://example.com/1",
+            "https://example.com/2",
+            "https://example.com/3",
+            "https://example.com/4",
+            "https://example.com/5"
+        ];
+
+        function redirect() {
+            // Selecciona una URL aleatoria del array
+            const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+            // Redirige a la URL seleccionada
+            window.location.href = randomUrl;
+        }
+
+        // Llama a la función de redirección cuando se carga la página
+        window.onload = redirect;
+    </script>
+</head>
+<body>
+    <h1>Redirigiendo...</h1>
+    <p>Si no eres redirigido automáticamente, <a href="#" onclick="redirect()">haz clic aquí</a>.</p>
+</body>
+</html>
